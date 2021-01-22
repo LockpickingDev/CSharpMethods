@@ -19,7 +19,7 @@ namespace CSharpMethods
             int index = 0;
             int x = 0;
             int y = 0;
-
+                
             while (x < array1.Length && y < array2.Length)
             {
                 if (array1[x] > array2[y]) // && x != array1.Length
@@ -47,13 +47,17 @@ namespace CSharpMethods
                 returnArray[index] = array2[y];
                 y++;
             }
-
+            
             return returnArray;
         }
         #endregion
 
+        #region Merge 2 arrays while leaving out duplicates
+
+        #endregion
+
         #region Most frequent element in an Array
-        //Most frequent word in an array of strings
+        //Most frequent Element in an Array
         //https://www.geeksforgeeks.org/frequent-element-array/
         public int GetElementOccurMost(int[] array)
         {
@@ -72,6 +76,7 @@ namespace CSharpMethods
                 }
             }
 
+            //Todo: redo this without LINQ
             var keyOfMaxValue = elemList.Aggregate((element1, element2) => element1.Value > element2.Value ? element1 : element2).Key;
             //Console.WriteLine("Word occurs most: " + keyOfMaxValue);
             //var maxValue = wordList.Values.Max();
@@ -119,7 +124,7 @@ namespace CSharpMethods
 
             Output array =  [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
             */
-        public void sortArr(int[] arr)
+        public void SortPriority(int[] arr)
         {
             int low = 0;
             int high = arr.Length - 1;
@@ -158,36 +163,6 @@ namespace CSharpMethods
                 }
             }
             Console.WriteLine("Final sorted 0's, 1's, and 2's array: " + ArrayAsString(arr));
-            /* 
-            Works by leaving current element in place or by swapping with the next element in line at the front or the end
-            l=low, m=med, h=high
-            lm								  h
-            {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
-	            lm							  h
-            {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
-	            l  m						  h
-            {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
-	            l	  m						  h
-            {0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1}
-	               l	 m					  h
-            {0, 0, 1, 1, 1, 2, 1, 2, 0, 0, 0, 1}
-	               l		m				  h
-            {0, 0, 1, 1, 1, 2, 1, 2, 0, 0, 0, 1}
-	               l		m			   h
-            {0, 0, 1, 1, 1, 1, 1, 2, 0, 0, 0, 2}
-	               l		   m		   h
-            {0, 0, 1, 1, 1, 1, 1, 2, 0, 0, 0, 2}
-	               l			  m		   h
-            {0, 0, 1, 1, 1, 1, 1, 2, 0, 0, 0, 2}
-	               l			  m		h
-            {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 2, 2}
-		              l				 m	h
-            {0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 2, 2}
-			             l				mh
-            {0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 2, 2}
-				            l			h  m
-            {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
-            */
 
 
             //Below requires 2 traversals of the array while the above requires 1
@@ -240,7 +215,7 @@ namespace CSharpMethods
 
 
 
-        #region Find first continuous sub-array which adds to a given sum
+        #region //Find first continuous sub-array which adds to a given sum
         //https://www.geeksforgeeks.org/find-subarray-with-given-sum-in-array-of-integers/
         public string SubArrayWithSum(int[] arr, int sum)
         {
@@ -342,10 +317,10 @@ namespace CSharpMethods
         }
         #endregion
 
-        #region //Find the first two numbers (or their indexes) and return int[2] whose sum equals the target Sum.
+        #region //TwoSum: Find the first two numbers (or their indexes) and return int[2] whose sum equals the target Sum.
         //https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
         //int[] numList = { 1, 3, 5, 7, 9 } //1 + 7 = 8 with indexes (0,3) or 3 + 5 = 8 with indexes (1,2)
-        public int[] FindElementsForTarget(int[] nums, int targetValue)
+        public int[] TwoSum(int[] nums, int targetValue)
         {
             int[] returnArray = { -1, -1 };
 
@@ -372,6 +347,43 @@ namespace CSharpMethods
                     }
                 }
             }
+
+
+
+
+
+            //List<int[]> returnNumbers = new List<int[]>();
+            //int[] tempArray = new int[2](){ -1, -1};
+
+
+            //int i = 0;
+            //int j = 1;
+
+            //while (i < inputArray.Length)
+            //{
+            //    if (inputArray[i] + inputArray[j] = targetSum)
+            //    {
+            //        tempArray[0] = inputArray[i];
+            //        tempArray[1] = inputArray[j];
+            //        returnNumbers.Add(tempArray);
+
+            //        tempArray[0] = -1;
+            //        tempArray[1] = -1;
+            //    }
+
+            //    if (j = inputArray.Length)
+            //    {
+            //        j = i + 1;
+            //        i++;
+            //    }
+
+            //    j++;
+            //}
+
+
+
+
+
 
             return returnArray;
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CSharpMethods
 {
@@ -84,9 +85,10 @@ namespace CSharpMethods
         }
         #endregion
 
-        #region FizzBuzz: When a number is multiple of three print “Fizz”, if multiple of five then print “Buzz”, if multiple of both three and five print “FizzBuzz”
+        #region //FizzBuzz: When a number is multiple of three print “Fizz”, if multiple of five then print “Buzz”, if multiple of both three and five print “FizzBuzz”
         public string FizzBuzz()
         {
+            //TOTO: Create vars to put in place of 3 and 5 so more dynamic
             StringBuilder returnString = new StringBuilder();
 
             for (int i = 1; i <= 100; i++)
@@ -128,6 +130,54 @@ namespace CSharpMethods
             }
 
             return returnString.ToString();
+        }
+        #endregion
+
+        #region ValidateEmail
+        public OperationResult ValidateEmail(string emailAddress)
+        {
+            OperationResult opResult = new OperationResult();
+
+            if (string.IsNullOrWhiteSpace(emailAddress))
+            {
+                opResult.success = false;
+                opResult.AddMessage("Email address is empty.");
+            }
+
+            if (opResult.success)
+            {
+                //bool isValidFormat = true;
+
+                //reg expression to check email format
+                //[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+
+                string pattern = @"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+";
+                //RegexOptions.IgnoreCase: Looks for pattern of letters rather than case
+                var match = Regex.Match(emailAddress, pattern, RegexOptions.IgnoreCase);
+
+                if (!match.Success)
+                {
+                    opResult.success = false;
+                    opResult.AddMessage("Email address is not in a valid format.");
+                }
+            }
+
+            ////check whether domain exists
+            //if (op.success)
+            //{
+            //    bool isValidDomain = true;
+
+            //    //code check whether domain exists
+
+            //    if (!isValidDomain)
+            //    {
+            //        op.success = false;
+            //        op.AddMessage("Email address does not have a valid domain.");
+            //    }
+
+            //}
+
+
+            return opResult;
         }
         #endregion
 

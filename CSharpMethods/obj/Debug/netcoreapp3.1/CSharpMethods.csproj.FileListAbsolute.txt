@@ -11,3 +11,16 @@ C:\Users\dan7g\source\repos\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\
 C:\Users\dan7g\source\repos\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.dll
 C:\Users\dan7g\source\repos\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.pdb
 C:\Users\dan7g\source\repos\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.genruntimeconfig.cache
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.exe
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.deps.json
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.runtimeconfig.json
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.runtimeconfig.dev.json
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.dll
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\bin\Debug\netcoreapp3.1\CSharpMethods.pdb
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.csprojAssemblyReference.cache
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.AssemblyInfoInputs.cache
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.AssemblyInfo.cs
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.csproj.CoreCompileInputs.cache
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.dll
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.pdb
+C:\Users\dan7g\source\repos\LockpickingDev\CSharpMethods\CSharpMethods\obj\Debug\netcoreapp3.1\CSharpMethods.genruntimeconfig.cache

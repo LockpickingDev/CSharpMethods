@@ -3,15 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
+
 namespace CSharpMethods
 {
-    class Strings
+    public class Strings
     {
 
         #region //Sort characters of the string in reverse order
         public string ReverseString(string str)
         {
             string reversedString = "";
+
+            if (string.IsNullOrWhiteSpace(str))
+            {
+                throw new ArgumentException("A string must be passed to be reversed."); //null, empty, or single space
+            }
 
             for(int x = str.Length - 1; x >= 0; x--)
             {
@@ -484,6 +490,13 @@ namespace CSharpMethods
 
         //Find the k most frequent words from a file
         //https://www.geeksforgeeks.org/find-the-k-most-frequent-words-from-a-file/?ref=rp
+        //Validate file is not empty
+        //For each line in the file,
+        //break the each line up into individual words
+        //count how many times each word occurs
+
+
+
 
         #region //Count how many times a specified word appears in a string
         public int CountWordOccurrences(string document, string wordCounting)

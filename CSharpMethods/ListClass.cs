@@ -11,15 +11,6 @@ namespace CSharpMethods
 
 
 
-
-
-
-
-
-
-
-
-
         // Given a list of words, group words that are anagrams into separate lists. Then return a list containing these anagram lists.
         //Anagram - Word formed by rearranging the letters of another
         public Dictionary<string, List<string>> FindAnagrams(List<string> words)

@@ -99,26 +99,54 @@ namespace CSharpMethods
         #endregion
 
         #region Fibonacci
+        public int Fibonacci(int num)
+        {
+            //int num = 200;
 
+            if (num <= 1) 
+            {
+                return num;
+            }
+            else 
+            {
+                return Fibonacci(num - 1) + Fibonacci(num - 2);
+            }
+        }
         #endregion
 
         #region Factorial
 
-        #endregion
-
-
-        #region asdf
-
-        #endregion
-
-        #region asdf
-
-        #endregion
-
-        #region asdf
+        //if (num === 0 || num === 1)
+        //{
+	       // return 1;
+        //} 
+        //else
+        //{
+	       // return num* factorial(num - 1); //num * return value
+        //}
 
         #endregion
 
+        #region Reversing a String
+        public string ReversingaString(string str)
+        {
+            if (str.Length == 0) {
+                return "";
+            }
 
-    }
+            return str[str.Length - 1] + ReversingaString(str.Substring(0, str.Length - 1));
+        }
+
+        #endregion
+
+    #region asdf
+
+    #endregion
+
+    #region asdf
+
+    #endregion
+
+
+}
 }

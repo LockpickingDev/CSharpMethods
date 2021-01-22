@@ -197,8 +197,8 @@ namespace CSharpMethods
             Arrays ArrayMethods = new Arrays();
 
 
-
             
+            //MergeSortedArrays - Merge 2 sorted Arrays into one sorted Array
             Console.WriteLine("Merge 2 sorted Arrays into one sorted Array");
             int[] sortedArray1 = { 1, 3, 5, 7, 9, 11 };
             int[] sortedArray2 = { 2, 4, 6, 8, 10, 12 };
@@ -208,52 +208,68 @@ namespace CSharpMethods
             Console.WriteLine("Arrays merged: ");
             Console.WriteLine(ArrayAsString(sortedResult) + "\r\n");
 
+            //GetElementOccurMost - Most frequent Element in an Array
+            Console.WriteLine("Most frequent word in an array of strings");
+            int[] mostFrequentArray = { 1, 2, 2, 3, 3, 3 }; //3
+            Console.WriteLine(ArrayAsString(mostFrequentArray));
+            Console.WriteLine(ArrayMethods.GetElementOccurMost(mostFrequentArray) + "\r\n");
+
+            //SortPriority - Sort Array with 0's, 1's, and 2's
+            Console.WriteLine("Sort Array with 0's, 1's, and 2's: ");
+            int[] zerosOnesTwos = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 }; //Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
+            Console.WriteLine(ArrayAsString(zerosOnesTwos));
+            ArrayMethods.SortPriority(zerosOnesTwos);
+            //Console.WriteLine( + "\r\n");
+
+            //SubArrayWithSum - Find first continuous sub-array which adds to a given sum
             Console.WriteLine("Find first continuous sub-array which adds to a given sum");
             int sum = 10;
             int[] array1 = { 1, 2, 3, 4, 7, 10 };
             Console.WriteLine(ArrayAsString(array1));
             Console.WriteLine("Sum of " + sum + " found between indexes " + ArrayMethods.SubArrayWithSum(array1, sum) + "\r\n");
 
+            //IndexSumLeftRightEqual - Find index where sum on the right equals sum on the left
             Console.WriteLine("Find index where sum on the right equals sum on the left");
             int[] array2 = { 1, 2, 3, 4, 7, 10 };
             Console.WriteLine(ArrayAsString(array2));
             Console.WriteLine("Index (0 = None): " + ArrayMethods.IndexSumLeftRightEqual(array2).ToString() + "\r\n");
 
+            //FindTriplet - Find a triplet such that sum of two equals to third element
             Console.WriteLine("Find a triplet such that sum of two equals to third element");
             int[] array3 = { 1, 2, 3, 4, 7, 10 };
             Console.WriteLine(ArrayAsString(array3));
             Console.WriteLine(ArrayMethods.FindTriplet(array3) + "\r\n");
 
+            //FindAllTriplets - Count all triplets of int array such that the sum of two elements equals the third element
             Console.WriteLine("Count all triplets of int array such that the sum of two elements equals the third element");
             int[] array4 = { 1, 2, 3, 4, 7, 10 };
             Console.WriteLine(ArrayAsString(array4));
             Console.WriteLine(ArrayMethods.FindAllTriplets(array4) + "\r\n");
 
+            //FindLeaders - Find all leaders in an array.  Leader is an element whose value is >= all elements to the right of it
             Console.WriteLine("Find all leaders in an array.  Leader is an element whose value is >= all elements to the right of it");
             int[] leaderArray = { 1, 10, 3, 4, 7, 1 };
             Console.WriteLine(ArrayAsString(leaderArray));
             Console.WriteLine(ArrayMethods.FindLeaders(leaderArray) + "\r\n");
 
+            //MaxWater - Max water trapped in array containers
             Console.WriteLine("Max water trapped in array \"containers\"");
             int[] arrayForWater = { 3, 0, 2, 0, 4 }; //10  { 2, 0, 2 }; //2  { 3, 0, 2, 0, 4 }; //7  { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }; //6
             Console.WriteLine(ArrayAsString(arrayForWater));
             Console.WriteLine("Result: " + ArrayMethods.MaxWater(arrayForWater).ToString() + "\r\n");
 
+            //TwoSum - Find the first two numbers (or their indexes) and return int[2] whose sum equals the target Sum
             Console.WriteLine("Find the first two numbers (or their indexes) and return int[2] whose sum equals the target Sum.");
             int[] array5 = { 1, 3, 5, 7, 9 }; //
             int targetSum = 100;
             Console.WriteLine(ArrayAsString(array5));
-            int[] indexResult = ArrayMethods.FindElementsForTarget(array5, targetSum); //int[] FindIndex(int[] nums, int targetValue)
+            int[] indexResult = ArrayMethods.TwoSum(array5, targetSum); //int[] FindIndex(int[] nums, int targetValue)
             Console.WriteLine("First numbers/indexes found for targetSum of " + targetSum + ": " + (indexResult[0].ToString() != "-1" ? indexResult[0].ToString() : "NoneFound") + ", " + (indexResult[1].ToString() != "-1" ? indexResult[1].ToString() : "NoneFound") + "\r\n");
 
 
 
             
-            Console.WriteLine("Sort Array with 0's, 1's, and 2's: ");
-            int[] zerosOnesTwos = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 }; //Output: {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2}
-            Console.WriteLine(ArrayAsString(zerosOnesTwos));
-            ArrayMethods.sortArr(zerosOnesTwos);
-            //Console.WriteLine( + "\r\n");
+            
 
 
             //TODO: Finish this method
@@ -390,6 +406,15 @@ namespace CSharpMethods
 
             Console.WriteLine("Text Triangle of specified character and width:");
             BasicMethods.DisplayTextTriangle();
+
+            string emailAddress = "dan7gr@gmail.com";
+            OperationResult result = BasicMethods.ValidateEmail(emailAddress); //OperationResult ValidateEmail(string emailAddress);
+
+            if (!result.success)
+            {
+                //throw new ArgumentException(result.MessageList);
+                //throw new ArgumentException(result.MessageList);
+            }
 
             //Console.WriteLine("Clock angle at 3:30 = {0}", BasicMethods.findClockAngle(3, 30));
             //Console.WriteLine("Clock angle at 12:00 = {0}", MathMethods.findClockAngle(12, 0));
